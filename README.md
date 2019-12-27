@@ -13,7 +13,7 @@ If all the files are kept in a single fold and the user has an internet connecti
 I  create this project from the outline given to me by my Triology Education Services instructor. I  also took code from my old homework and in class activities. I had help from my tutor Isabel Arcones.
 
 ## Contributing 
-I was the only person contributing to this homework, but I also had help from my tutor. 
+I was the only person contributing to this project, but I also had help from my tutor. 
 
 ## Challenges
 One of my major challenges was that I had never used handlebars until my tutory had walked me through it. I'm still pretty shacky but with more practice I'll get better. This was also my first time using the MVC design pattern which made the set up take longer then I thought it would.   
