@@ -51,7 +51,8 @@ const orm = {
     });
   },
   insertOne: function(table, cols, vals, cb) {
-    const queryString = "INSERT INTO " + table;
+    console.log(table, cols, vals)
+    let queryString = "INSERT INTO " + table;
 
     queryString += " (";
     queryString += cols.toString();
@@ -72,7 +73,7 @@ const orm = {
   },
   // An example of objColVals would be {name: panther, sleepy: true}
   updateOne: function(table, objColVals, condition, cb) {
-    const queryString = "UPDATE " + table;
+    let queryString = "UPDATE " + table;
 
     queryString += " SET ";
     queryString += objToSql(objColVals);
