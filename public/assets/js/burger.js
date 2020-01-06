@@ -14,6 +14,7 @@ document.getElementById("addburger").addEventListener("click", function(){
  .then(function(data){
     console.log(data)
     //reaload
+    window.location.reload(true);
  })
 })
 
@@ -21,12 +22,14 @@ document.querySelector(".devoured").addEventListener("click", function(){
     event.preventDefault()
     const ID = $(this).attr("index")
     console.log(ID)
-// onckck for devour  get the ID
+// onclick for devour  get the ID
 $.ajax({
     url:"/burger/update/" + ID,
     method: "PUT"
 }).then(function(data){
     console.log(data)
     //reload the page
+    window.location.reload(true);
+    console.log("hello")  
 })
 })
