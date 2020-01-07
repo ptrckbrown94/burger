@@ -1,35 +1,41 @@
 console.log("javascript")
 
-document.getElementById("addburger").addEventListener("click", function(){
+document.getElementById("addburger").addEventListener("click", function () {
     event.preventDefault()
- const burgerName = document.getElementById("burger-name").value
- console.log(burgerName)
+    const burgerName = document.getElementById("burger-name").value
+    console.log(burgerName)
 
- // call the route to create the burger on the db  FETCH   (AJAX)  post query, pass the name of the burger
- $.ajax({
-    url: "/burger/create",
-    method:"POST",
-    data: {"burgerName": burgerName}
- })
- .then(function(data){
-    console.log(data)
-    //reaload
-    window.location.reload(true);
- })
+    // call the route to create the burger on the db  FETCH   (AJAX)  post query, pass the name of the burger
+    $.ajax({
+        url: "/burger/create",
+        method: "POST",
+        data: { "burgerName": burgerName }
+    })
+        .then(function (data) {
+            console.log(data)
+            //reaload
+            window.location.reload(true);
+        })
 })
+const devoured = document.querySelectorAll(".devoured")
+for (let i = 0; i < devoured.length; i++) {
 
-document.querySelector(".devoured").addEventListener("click", function(){
-    event.preventDefault()
-    const ID = $(this).attr("index")
-    console.log(ID)
-// onclick for devour  get the ID
-$.ajax({
-    url:"/burger/update/" + ID,
-    method: "PUT"
-}).then(function(data){
-    console.log(data)
-    //reload the page
-    window.location.reload(true);
-    console.log("hello")  
-})
-})
+    
+    devoured[i].addEventListener("click", function () {
+        event.preventDefault()
+        const ID = $(this).attr("index")
+        console.log(ID)
+        // onclick for devour  get the ID
+        $.ajax({
+            url: "/burger/update/" + ID,
+            method: "PUT"
+        }).then(function (data) {
+            console.log(data)
+            //reload the page
+            window.location.reload(true);
+            console.log("hello")
+        })
+    })
+
+}
+

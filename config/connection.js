@@ -12,6 +12,17 @@ const connection = mysql.createConnection({
     // Your password
     password: "ehn9mnrxg9yu8en0",
     database: "edkh7j5t4jevscj8"
+
+        // to use locally see below
+        
+        // host: "127.0.0.1", 
+        // port: 3306, 
+        // user:"root",
+        // password: "root",
+        // database: "burgers_db"
+        
+
+
 });
 
 connection.connect(function (err) {
