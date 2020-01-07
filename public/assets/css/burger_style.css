@@ -1,11 +1,11 @@
-#row-header{
-    align-content: center;
+.header{
+    justify-content: center;
     
 }
 
 .devouredlayout {
 
-    color: blue;
+    color:red;
     justify-content: right;
 
 }
